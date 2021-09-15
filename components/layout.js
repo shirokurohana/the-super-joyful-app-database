@@ -8,39 +8,39 @@ export default function Layout( { children, home } ) {
         <title>La Familia Reynosa</title>
       </Head>
       <header>
-        <nav class="navbar sticky-top bg-info navbar-expand-lg navbar-light">
-          <div class="container-fluid">
+        <nav className="navbar sticky-top bg-info navbar-expand-lg navbar-light">
+          <div className="container-fluid">
             <Link href="/">
-              <a class="navbar-brand">La Familia Reynosa</a>
+              <a className="navbar-brand">La Familia Reynosa</a>
             </Link>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav">
-                <li class="nav-item">
+            <div className="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul className="navbar-nav">
+                <li className="nav-item">
                 <Link href="/">
-                 <a class="nav-link active" aria-current="page">Home</a>
+                 <a className="nav-link active" aria-current="page">Home</a>
                 </Link>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                   <Link href="/2">
-                    <a class="nav-link">Esteban Reynosa</a>
+                    <a className="nav-link">Esteban Reynosa</a>
                   </Link>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                   <Link href="/1">
-                    <a class="nav-link">Maria Reynosa</a>
+                    <a className="nav-link">Maria Reynosa</a>
                   </Link>
                 </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <li className="nav-item dropdown">
+                  <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     More
                   </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li>
                       <Link href="/3">
-                        <a class="dropdown-item">Ofelia</a>
+                        <a className="dropdown-item">Ofelia</a>
                       </Link>
                     </li>
                   </ul>
@@ -53,21 +53,21 @@ export default function Layout( { children, home } ) {
       <main>{children}</main>
       {!home && (
           <Link href="/">
-            <a class="btn btn-info mt-4">&#127968; Go back home</a>
+            <a className="btn btn-info mt-4">&#127968; Go back home</a>
           </Link>
         )
       }
       <footer>
-        <div class="container">
-          <div class="row">
-            <div class="col-4 text-center mt-4">
+        <div className="container">
+          <div className="row">
+            <div className="col-4 text-center mt-4">
               Visit Us 
               in Santa Rosa
             </div>
-            <div class="col-4 text-center mt-4">
+            <div className="col-4 text-center mt-4">
               &#169; 2021
             </div>
-            <div class="col-4 text-center mt-4">
+            <div className="col-4 text-center mt-4">
               Our Socials
             </div>
           </div>
