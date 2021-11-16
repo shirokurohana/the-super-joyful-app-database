@@ -17,13 +17,13 @@ export default function Home({ allData }) {
         <h1 className="mt-4 text-center">My Favs 😇</h1>
         <div className="list-group">
           {allData.map(({ id, name }) => (
-            <div className="row mt-4 text-center">
+            <div className="row mt-4 text-center" key={id}>
             <div className="col-sm-7 w-50 mx-auto">
               <div className="card">
                 <div className="card-body">
                   <h4 className="card-title">{name}</h4>
                   <h5> See some of my favs</h5>
-                  <Link key={id} href={`/${id}`}>
+                  <Link href={`/${id}`}>
                       <a className="btn btn-primary">Read more!</a>
                   </Link>
                 </div>
