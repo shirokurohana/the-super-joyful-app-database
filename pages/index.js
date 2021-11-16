@@ -4,7 +4,7 @@ import Layout from '../components/layout';
 import { getSortedList } from '../lib/data';
 
 export async function getStaticProps() {
-  const allData = getSortedList();
+  const allData = await getSortedList();
   return {
     props: {
       allData
@@ -14,22 +14,25 @@ export async function getStaticProps() {
 export default function Home({ allData }) {
   return (
       <Layout home>
-        <h1 className="text-center mt-4">My family</h1>
-        <p className="lead text-center">
-          Hi there, this is my family. Click on each member to see a bit more info about each! Have a nice day! 
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-sun" viewBox="0 0 16 16">
-          <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
-        </svg>
-        </p>
-
-        <div className="text-center">
-          <ul className="list-group list-group-flush">
-            {allData.map(({ id, name }) => (
-              <Link key={id} href={`/${id}`}>
-                <a className="list-group-item list-group-item-action">{name}</a>
-              </Link>
-            ))}
-          </ul>
+        <h1 className="mt-4 text-center">My Favs 😇</h1>
+        <div className="list-group">
+          {allData.map(({ id, name }) => (
+            <div className="row mt-4 text-center">
+            <div className="col-sm-7 w-50 mx-auto">
+              <div className="card">
+                <div className="card-body">
+                  <h4 className="card-title">{name}</h4>
+                  <h5> See some of my favs</h5>
+                  <Link key={id} href={`/${id}`}>
+                      <a className="btn btn-primary">Read more!</a>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            
+           
+          </div>
+          ))}
         </div>
       </Layout>
   );

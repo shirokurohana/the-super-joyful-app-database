@@ -3,15 +3,15 @@ import Link from 'next/link';
 
 export default function Layout( { children, home } ) {
   return (
-    <div>
+    <>
       <Head>
-        <title>La Familia Reynosa</title>
+        <title>My Favs</title>
       </Head>
       <header>
-        <nav className="navbar sticky-top bg-info navbar-expand-lg navbar-light">
+        <nav className="navbar sticky-top navbar-expand-lg navbar-light">
           <div className="container-fluid">
             <Link href="/">
-              <a className="navbar-brand">La Familia Reynosa</a>
+              <a className="navbar-brand">My Favs</a>
             </Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
@@ -24,27 +24,37 @@ export default function Layout( { children, home } ) {
                 </Link>
                 </li>
                 <li className="nav-item">
-                  <Link href="/2">
-                    <a className="nav-link">Esteban Reynosa</a>
+                  <Link href="/1">
+                    <a className="nav-link">Verses</a>
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link href="/1">
-                    <a className="nav-link">Maria Reynosa</a>
+                  <Link href="/40">
+                    <a className="nav-link">Music</a>
                   </Link>
                 </li>
-                <li className="nav-item dropdown">
-                  <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    More
-                  </a>
-                  <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li>
-                      <Link href="/3">
-                        <a className="dropdown-item">Ofelia</a>
-                      </Link>
-                    </li>
-                  </ul>
+                <li className="nav-item">
+                  <Link href="/44">
+                    <a className="nav-link">Podcasts</a>
+                  </Link>
                 </li>
+                <li className="nav-item">
+                  <Link href="/62">
+                    <a className="nav-link">Videos</a>
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link href="/25">
+                    <a className="nav-link">My take on 1 Samuel 16:7</a>
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link href="/">
+                    <a className="nav-link">Go Back Home</a>
+                  </Link>
+                </li>
+                
+                  
               </ul>
             </div>
           </div>
@@ -52,27 +62,30 @@ export default function Layout( { children, home } ) {
       </header>
       <main>{children}</main>
       {!home && (
+        <div className="mt-4 text-center ">
           <Link href="/">
             <a className="btn btn-info mt-4">&#127968; Go back home</a>
           </Link>
+          </div>
         )
       }
       <footer>
         <div className="container">
           <div className="row">
             <div className="col-4 text-center mt-4">
-              Visit Us 
-              in Santa Rosa
+              Visit us 
+              in Santa Rosa 🏘
             </div>
             <div className="col-4 text-center mt-4">
-              &#169; 2021
+            Copyright &#169; 2021 
+              Made with ❤️
             </div>
             <div className="col-4 text-center mt-4">
-              Our Socials
+              Our socials 📱
             </div>
           </div>
         </div>
       </footer>
-    </div>
+    </>
   );
 }
