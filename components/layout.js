@@ -64,13 +64,13 @@ export default function Layout( { children, home } ) {
       {!home && (
         <div className="mt-4 text-center ">
           <Link href="/">
-            <a className="btn btn-info mt-4">&#127968; Go back home</a>
+            <a className="btn btn-info mt-4 back-home">&#127968; Go back home</a>
           </Link>
           </div>
         )
       }
       <footer>
-        <div className="container">
+        <div className="container mb-4">
           <div className="row">
             <div className="col-4 text-center mt-4">
               Visit us 
@@ -78,7 +78,7 @@ export default function Layout( { children, home } ) {
             </div>
             <div className="col-4 text-center mt-4">
             Copyright &#169; 2021 
-              Made with ❤️
+            &#32; Made with ❤️
             </div>
             <div className="col-4 text-center mt-4">
               Our socials 📱

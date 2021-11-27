@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 html,
 body {
   background-color: #6b70ff;
   
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 #__next {
   background: hsla(238, 100%, 71%, 1);
@@ -20,6 +21,10 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#696EFF", en
 .btn.btn-primary{
   background-color: #6b70ff;
   
+}
+
+.pretty, .btn.btn-info.mt-4.back-home{
+  color:#4247e6;
 }
 
 .btn.btn-info {

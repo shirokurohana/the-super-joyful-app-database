@@ -28,20 +28,22 @@ export default function Entry({ itemData }) {
             <div className="col-sm-6 w-50 mx-auto">
       <div className="card mt-4">
         <div className="card-body">
-          <h3 className="card-title">{itemData?.post_title}</h3>
-          <h5> Content </h5>
-          <p className="card-text">{itemData?.post_excerpt}</p>
-            <p className="card-text">{itemData?.post_content}!</p>
-            <h5> See post on da web </h5>
+          <h1 className="card-title">{itemData?.post_title}</h1>
+          <p className="card-text mb-4 pretty">Posted by: {itemData?.user_login} &#x1F430;</p>
+
+          <p className="card-text " dangerouslySetInnerHTML={{__html: itemData?.post_excerpt}} />
+            <div className="card-text" dangerouslySetInnerHTML={{__html: itemData?.post_content}} />
+            <h5 className="mt-4"> See post on da web </h5>
             <Link href={`${itemData?.guid}`}>
                       <a className="btn btn-primary">See this post</a>
               </Link>
            
         </div>
-        <ul className="list-group list-group-flush">
-          <li className="list-group-item small">Last modified: {itemData?.post_modified}</li>
-          <li className="list-group-item small">Status: {itemData?.post_status}!</li>
-        </ul>
+    
+          <small className="text-muted">Last updated on: {itemData?.post_modified}</small>
+          <small className= "text-muted">Status: {itemData?.post_status}</small>
+          <small className="mb-4 text-muted">ID #{itemData?.ID}</small>
+      
         
       </div>
       </div>
